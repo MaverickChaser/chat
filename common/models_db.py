@@ -20,3 +20,7 @@ class Message(Base):
         self.text = text
         self.timestamp = timestamp
         self.rev = rev
+
+
+    def __str__(self):
+        return "{id: %s, sender: %s, receiver: %s}" % (self.id, self.sender, self.receiver)
